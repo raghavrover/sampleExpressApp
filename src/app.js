@@ -6,12 +6,14 @@ const app = express();
 app.use(express.json({ limit: "16kb" }));
 // app.use(express.urlencoded({ limit: "16kb" }));
 
-app.use("/api/v1/users", userRouter);
-app.get("/api/v1/test", (req, res) => {
+//healthcheck route
+app.get("/", (req, res) => {
   res.status(200).json({
-    message: "Server is running and responding to requests as well",
+    message: "Server is running successfully and listening to the requests.",
   });
 });
+
+app.use("/api/v1/users", userRouter);
 
 // Middleware to define common error handling
 app.use((err, req, res, next) => {
