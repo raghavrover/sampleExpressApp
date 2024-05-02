@@ -1,7 +1,7 @@
 {
   "name": "testbackend",
   "version": "1.0.0",
-  "description": "",
+  "description": "Sample Application to test the Elastic Beanstalk custom configuration through .ebextensions folder",
   "main": "index.js",
   "type": "module",
   "scripts": {

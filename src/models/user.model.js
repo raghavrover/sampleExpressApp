@@ -16,7 +16,7 @@ const userSchema = new Schema(
     },
     nickname: {
       type: String,
-      required: true,
+      // required: true,
     },
   },
   { timestamps: true }
